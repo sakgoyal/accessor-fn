@@ -1,20 +1,18 @@
 {
-  "name": "accessor-fn",
-  "version": "1.5.1",
+  "name": "accessor-fn-2",
+  "version": "2.0.3",
   "description": "A wrapper function for object accessor properties",
   "type": "module",
-  "unpkg": "dist/accessor-fn.js",
-  "main": "dist/accessor-fn.js",
-  "module": "dist/accessor-fn.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     "types": "./dist/index.d.ts",
-    "umd": "./dist/accessor-fn.min.umd.cjs",
-    "default": "./dist/accessor-fn.js"
+    "default": "./dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasturiano/accessor-fn.git"
+    "url": "git+https://github.com/sakgoyal/accessor-fn.git"
   },
   "keywords": [
     "accessor",
@@ -23,29 +21,28 @@
     "wrapper"
   ],
   "author": {
-    "name": "Vasco Asturiano",
-    "url": "https://github.com/vasturiano"
+    "name": "Saksham Goyal",
+    "url": "https://github.com/sakgoyal"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vasturiano/accessor-fn/issues"
+    "url": "https://github.com/sakgoyal/accessor-fn/issues"
   },
-  "homepage": "https://github.com/vasturiano/accessor-fn",
+  "homepage": "https://github.com/sakgoyal/accessor-fn",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "test": "vitest",
-    "prepare": "npm run build"
+    "build": "tsup src/index.ts --format esm --dts --minify",
+    "lint": "tsc",
+    "test": "vitest run",
+    "prepare": "npm run build && vitest run"
   },
   "files": [
     "dist/**/*"
   ],
   "devDependencies": {
-    "@types/node": "^20.14.11",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4",
-    "vite-plugin-dts": "^4.0.0-beta.1",
-    "vitest": "^2.0.3"
+    "@types/node": "^20",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vitest": "^2"
   },
   "engines": {
     "node": ">=20"

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import accessorFn from '../src'
+import {accessorFn} from '../src'
 
 test('test cases from README.md 1', () => {
 	const obj = {
@@ -8,7 +8,7 @@ test('test cases from README.md 1', () => {
 	};
 	const aFn = accessorFn('a');
 
-	expect(aFn(obj)).toBe(1)
+	expect(aFn(obj)).toBe(1);
 })
 
 test('test cases from README.md 2', () => {
